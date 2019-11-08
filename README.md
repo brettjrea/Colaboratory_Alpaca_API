@@ -27,12 +27,12 @@ Once connected you can see your positions with this command.
 api.list_positions()
 ```
 
-Or return a tabulated form of data for a ticker with this command.
+or return a tabulated form of data for a ticker with this command.
 ```
 api.get_barset('MSFT', 'day', limit=10).df
 ```
 
-To visualize the data install MATPLOTLIB with
+### Now to visualize the data install MATPLOTLIB with
 ```
 !pip install mpl_finance
 ```
