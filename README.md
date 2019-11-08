@@ -1,4 +1,11 @@
 # Colaboratory_Alpaca_API
 ## Jupyter Notebook With Alpaca Integration.
 
-```!pip install alpaca-trade-api```
+```
+!pip install alpaca-trade-api
+```
+
+```
+import alpaca_trade_api as alpaca 
+api = alpaca.REST('API KEY ID', 'SECRET KEY', 'ENDPOINT')
+```
