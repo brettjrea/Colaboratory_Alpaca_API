@@ -17,7 +17,33 @@ Once connected you can see your positions with this command.
 api.list_positions()
 ```
 
-Or return a Tabulated form of the data with this command.
+Or return a tabulated form of data for a ticker with this command.
 ```
 api.get_barset('MSFT', 'day', limit=10).df
 ```
+
+To visualize the data install MATPLOTLIB with
+```
+!pip install mpl_finance
+```
+
+And run the following to return a candlestick chart.
+```
+from mpl_finance import candlestick_ohlc
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+from matplotlib.dates import MONDAY, DateFormatter, DayLocator, WeekdayLocator
+
+df = api.get_barset('MSFT', 'day', limit=253).df['MSFT']
+quotes = zip(mdates.date2num(df.index.to_pydatetime()),
+             df.open, df.high, df.low, df.close)
+
+fig, ax = plt.subplots(figsize=(20,10))
+ax.xaxis_date()
+ax.autoscale_view()
+alldays = DayLocator()
+ax.xaxis.set_minor_locator(alldays)
+candlestick_ohlc(ax, quotes, width=0.5, colorup='g', colordown='r')
+```
+
+
