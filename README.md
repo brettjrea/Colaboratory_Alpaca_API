@@ -1,4 +1,4 @@
-# Jupyter Notebook with Alpaca market integration.
+# Jupyter Notebook with Alpaca Markets integration.
 
 ## Alpaca Markets
 https://alpaca.markets/
@@ -8,7 +8,7 @@ Create account with Alpaca markets.
 ## Google Colaboratory
 https://colab.research.google.com
 
-Create new Jupyter Notebook on Google Colab.
+### Create new Jupyter Notebook on Google Colab.
 
 
 Install Alpacas Python Library.
