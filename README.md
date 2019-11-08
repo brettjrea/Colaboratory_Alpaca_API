@@ -8,10 +8,10 @@ Create account with Alpaca markets.
 ## Google Colaboratory
 https://colab.research.google.com
 
-### Create new Jupyter Notebook on Google Colab.
+Create new Jupyter Notebook on Google Colab.
 
 
-Install Alpacas Python Library.
+### Install Alpacas Python Library.
 ```
 !pip install alpaca-trade-api
 ```
